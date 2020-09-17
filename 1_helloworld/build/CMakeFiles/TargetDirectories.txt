@@ -1,3 +1,0 @@
-/home/ram/workarea/OpenCL/OpenCL/1_helloworld/build/CMakeFiles/rebuild_cache.dir
-/home/ram/workarea/OpenCL/OpenCL/1_helloworld/build/CMakeFiles/1_helloworld.dir
-/home/ram/workarea/OpenCL/OpenCL/1_helloworld/build/CMakeFiles/edit_cache.dir

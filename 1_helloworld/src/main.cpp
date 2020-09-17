@@ -4,7 +4,7 @@
 * Author : Ram
 * Email : ramkalath@gmail.com
  * Breif Description : learning opencl
- * Detailed Description : beginnings of learning opencl - lets start with a helloworld program
+ * Detailed Description : beginnings of learning opencl - lets start with a helloworld program; Note I have removed all the error returns so that the code is minimal to be observed and learnt
 *****************************************************************************/
 
 #include <iostream>
@@ -13,7 +13,7 @@
 #include <CL/cl.h>
 #include <string.h>
 
-const int ARRAY_SIZE = 1000;
+const int ARRAY_SIZE = 100000;
 
 char* get_program_from_file(const char* file_path)
 {
@@ -95,6 +95,10 @@ int main()
 	======================================================================================================= */
     size_t globalWorkSize[1] = { ARRAY_SIZE };
     size_t localWorkSize[1] = { 1 };
+	
+    clock_t start, end; 
+    start = clock(); 
+
 	// This is where the computation happens
     clEnqueueNDRangeKernel(command_queue, 
 						   kernel, 
@@ -105,6 +109,9 @@ int main()
 						   0, 
 						   NULL, 
 						   NULL);
+
+    end = clock(); 
+	std::cout << "Time taken by program is : " << double(end - start)/(double)(CLOCKS_PER_SEC) << std::endl;
 
 	/* =======================================================================================================
 	7) reading the buffer back to the host
@@ -119,8 +126,12 @@ int main()
 						NULL, 
 						NULL);
 
-    for(unsigned int i=0; i<ARRAY_SIZE; i++) 
-		std::cout << result[i] << " ";
+
+	/* printing the result ================================================================================*/
+	//for(unsigned int i=0; i<ARRAY_SIZE; i++) 
+		//std::cout << result[i] << " ";
+
+	//std::cout << std::endl;
 
 	return 0;
 }
