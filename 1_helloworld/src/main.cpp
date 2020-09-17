@@ -1,10 +1,11 @@
 /*****************************************************************************
- * Author : Ram
- * Date :  11/09/20
- * Email : ramkalath@gmail.com
+* Filename : main.cpp
+* Date : 17-9-2020
+* Author : Ram
+* Email : ramkalath@gmail.com
  * Breif Description : learning opencl
  * Detailed Description : beginnings of learning opencl - lets start with a helloworld program
- *****************************************************************************/
+*****************************************************************************/
 
 #include <iostream>
 #include <fstream>
@@ -60,7 +61,7 @@ int main()
 	/* =======================================================================================================
 	3) creating a kernel from the code; building it during runtime
 	======================================================================================================= */
-	const char* kernel_code = get_program_from_file("HelloWorld.cl");
+	const char* kernel_code = get_program_from_file("./kernel_files/HelloWorld.cl");
 	cl_program program = clCreateProgramWithSource(context, 1, (const char**)&kernel_code, NULL, NULL);
 	clBuildProgram(program, 0, NULL, NULL, NULL, NULL);
     cl_kernel kernel = clCreateKernel(program, "hello_kernel", NULL);
@@ -78,23 +79,23 @@ int main()
     }
 
 	/* =======================================================================================================
-	5) 
+	5) creating memory objects for the kernel to use
 	======================================================================================================= */
     cl_mem memObjects[3] = {0, 0, 0};
-	// TODO(ram): check if clCreateBuffer transfers data from host to device
     memObjects[0] = clCreateBuffer(context, CL_MEM_READ_ONLY|CL_MEM_COPY_HOST_PTR, sizeof(float) * ARRAY_SIZE, a, NULL);
     memObjects[1] = clCreateBuffer(context, CL_MEM_READ_ONLY|CL_MEM_COPY_HOST_PTR, sizeof(float) * ARRAY_SIZE, b, NULL);
     memObjects[2] = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(float) * ARRAY_SIZE, NULL, NULL);
-
-	// TODO(ram): checkout what clSetKernelArg does;
+	// in the kernel code arguments 0, 1, 2 maps to the first set of arguments there
     clSetKernelArg(kernel, 0, sizeof(cl_mem), &memObjects[0]);
     clSetKernelArg(kernel, 1, sizeof(cl_mem), &memObjects[1]);
     clSetKernelArg(kernel, 2, sizeof(cl_mem), &memObjects[2]);
 
+	/* =======================================================================================================
+	6) setting worksize info
+	======================================================================================================= */
     size_t globalWorkSize[1] = { ARRAY_SIZE };
     size_t localWorkSize[1] = { 1 };
-
-	// I think this is where the computation happens
+	// This is where the computation happens
     clEnqueueNDRangeKernel(command_queue, 
 						   kernel, 
 						   1, 
@@ -105,7 +106,9 @@ int main()
 						   NULL, 
 						   NULL);
 
-	// Read the buffer back to host
+	/* =======================================================================================================
+	7) reading the buffer back to the host
+	======================================================================================================= */
     clEnqueueReadBuffer(command_queue, 
 						memObjects[2], 
 						CL_TRUE, 
@@ -118,7 +121,7 @@ int main()
 
     for(unsigned int i=0; i<ARRAY_SIZE; i++) 
 		std::cout << result[i] << " ";
-	
+
 	return 0;
 }
 
