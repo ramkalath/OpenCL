@@ -3,8 +3,8 @@
 * Date : 17-9-2020
 * Author : Ram
 * Email : ramkalath@gmail.com
- * Breif Description : learning opencl
- * Detailed Description : beginnings of learning opencl - lets start with a helloworld program; Note I have removed all the error returns so that the code is minimal to be observed and learnt
+* Breif Description : learning opencl
+* Detailed Description : beginnings of learning opencl - lets start with a helloworld program (adding 2 arrays); Note I have removed all the error returns so that the code is minimal to be observed and learnt
 *****************************************************************************/
 
 #include <iostream>
@@ -63,7 +63,7 @@ int main()
 	======================================================================================================= */
 	const char* kernel_code = get_program_from_file("./kernel_files/HelloWorld.cl");
 	cl_program program = clCreateProgramWithSource(context, 1, (const char**)&kernel_code, NULL, NULL);
-	clBuildProgram(program, 0, NULL, NULL, NULL, NULL);
+	clBuildProgram(program, 0, NULL, NULL, NULL, NULL); // we have omitted build error checks; we need to do that too
     cl_kernel kernel = clCreateKernel(program, "hello_kernel", NULL);
 
 	/* =======================================================================================================
@@ -99,7 +99,7 @@ int main()
     clock_t start, end; 
     start = clock(); 
 
-	// This is where the computation happens
+	// This is where the computation happens; the enqueue command queues up the command in the command_queue. Later when the previous event is finished, this is executed.
     clEnqueueNDRangeKernel(command_queue, 
 						   kernel, 
 						   1, 
@@ -117,11 +117,11 @@ int main()
 	7) reading the buffer back to the host
 	======================================================================================================= */
     clEnqueueReadBuffer(command_queue, 
-						memObjects[2], 
-						CL_TRUE, 
+						memObjects[2], // read from mem object 2
+						CL_TRUE, // blocking_read - waits for the read to complete before return
 						0, 
 						ARRAY_SIZE * sizeof(float), 
-						result, 
+						result, // into result
 						0, 
 						NULL, 
 						NULL);
