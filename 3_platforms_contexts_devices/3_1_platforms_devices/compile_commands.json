@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/ram/workarea/OpenCL/OpenCL/3_platforms_contexts_devices/build",
+  "command": "/usr/bin/c++   -I/home/ram/workarea/OpenCL/OpenCL/3_platforms_contexts_devices/./include  -g   -o CMakeFiles/3_platforms_contexts_devices.dir/src/platforms.cpp.o -c /home/ram/workarea/OpenCL/OpenCL/3_platforms_contexts_devices/src/platforms.cpp",
+  "file": "/home/ram/workarea/OpenCL/OpenCL/3_platforms_contexts_devices/src/platforms.cpp"
+}
+]
