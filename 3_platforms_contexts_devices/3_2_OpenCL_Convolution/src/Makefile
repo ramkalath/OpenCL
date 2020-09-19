@@ -2,10 +2,8 @@ PROJECT_NAME = 3_2_OpenCL_Convolution
 .SILENT: all project
 
 all: 
-	# echo "#define USE_GLEW" > use_glew.h
 	cd ../build; \
 	make
-	# rm use_glew.h && touch use_glew.h
 	@echo -e "\033[92m ------------- Compilation Successful ------------------- \033[0m"
 project:
 	if [ ! -d "../build" ]; then mkdir ../build; fi

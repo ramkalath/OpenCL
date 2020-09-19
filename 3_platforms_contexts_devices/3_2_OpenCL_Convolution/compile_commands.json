@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/ram/workarea/OpenCL/OpenCL/3_platforms_contexts_devices/3_2_OpenCL_Convolution/build",
+  "command": "/usr/bin/c++   -I/home/ram/workarea/OpenCL/OpenCL/3_platforms_contexts_devices/3_2_OpenCL_Convolution/./include  -g   -o CMakeFiles/3_2_OpenCL_Convolution.dir/src/main.cpp.o -c /home/ram/workarea/OpenCL/OpenCL/3_platforms_contexts_devices/3_2_OpenCL_Convolution/src/main.cpp",
+  "file": "/home/ram/workarea/OpenCL/OpenCL/3_platforms_contexts_devices/3_2_OpenCL_Convolution/src/main.cpp"
+}
+]
