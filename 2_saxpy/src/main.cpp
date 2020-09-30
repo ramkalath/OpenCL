@@ -1,10 +1,10 @@
 /*****************************************************************************
 * Filename : main.cpp
-* Date : 17-9-2020
+* Date : 30-9-2020
 * Author : Ram
 * Email : ramkalath@gmail.com
 * Breif Description : learning opencl
-* Detailed Description : beginnings of learning opencl - lets start with a helloworld program (adding 2 arrays); Note I have removed all the error returns so that the code is minimal to be observed and learnt
+* Detailed Description : beginnings of learning opencl - lets start with a saxpy program; Note I have removed all the error returns so that the code is minimal to be observed and learnt
 *****************************************************************************/
 
 #include <iostream>
@@ -72,6 +72,7 @@ int main()
     float result[ARRAY_SIZE];
     float a[ARRAY_SIZE];
     float b[ARRAY_SIZE];
+	float alpha = 2.0f;
     for(unsigned int i=0; i<ARRAY_SIZE; i++)
     {
         a[i] = (float)i;
@@ -86,9 +87,10 @@ int main()
     memObjects[1] = clCreateBuffer(context, CL_MEM_READ_ONLY|CL_MEM_COPY_HOST_PTR, sizeof(float) * ARRAY_SIZE, b, NULL);
     memObjects[2] = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(float) * ARRAY_SIZE, NULL, NULL);
 	// in the kernel code arguments 0, 1, 2 maps to the first set of arguments there
-    clSetKernelArg(kernel, 0, sizeof(cl_mem), &memObjects[0]);
-    clSetKernelArg(kernel, 1, sizeof(cl_mem), &memObjects[1]);
-    clSetKernelArg(kernel, 2, sizeof(cl_mem), &memObjects[2]);
+    clSetKernelArg(kernel, 0, sizeof(float), &alpha);
+    clSetKernelArg(kernel, 1, sizeof(cl_mem), &memObjects[0]);
+    clSetKernelArg(kernel, 2, sizeof(cl_mem), &memObjects[1]);
+    clSetKernelArg(kernel, 3, sizeof(cl_mem), &memObjects[2]);
 
 	/* =======================================================================================================
 	6) setting worksize info
@@ -125,7 +127,6 @@ int main()
 						0, 
 						NULL, 
 						NULL);
-
 
 	/* printing the result ================================================================================*/
 	for(unsigned int i=0; i<ARRAY_SIZE; i++) 

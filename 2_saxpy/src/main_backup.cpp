@@ -13,7 +13,7 @@
 #include <CL/cl.h>
 #include <string.h>
 
-const int ARRAY_SIZE = 10000;
+const int ARRAY_SIZE = 100000;
 
 char* get_program_from_file(const char* file_path)
 {
