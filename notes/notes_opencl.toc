@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Programming Models}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Platform Model}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Execution Model}{2}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Work IDs:}{2}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Context:}{3}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.3}Command-Queues:}{3}{subsubsection.1.2.3}
