@@ -99,7 +99,20 @@ OpenCL describes five different memory regions viz,
 
 % TODO(ram): draw the layout of the memory using Ipad
 
+{\color{red} \date{18-Nov-2020}}
 \subsection{Programming Models}
+\subsubsection{Data-Parallel Programming Model}
+There is some sort of manual alignment of data structures with the NDRange index space. Kernel defines the swquence of instructions to be applied concurrently as the work-items in an OpenCL computation.
+
+In more complex situations involving data sharing between work-items, synchronization mechanisms are required. The blocks are called \textit{\textbf{work-group-barriers}}. All work-items in a work-group must execute the barrier before they are allowed to proceed. OpenCl does not provide sync mechanisms for work-items of different work-groups, it helps only to sync only within the work-group.
+
+There is something called heirarchical data parallelism. In \textit{\textbf{explicit model}} the programmer takes responsiblity in defining the sized of the work-groups within the NDRange. In \textit{\textbf{implicit model}} the programmer just defines the NDRange space and leaves it to the system to choose the work-group size. If there is no branch statements, then each work-item will exectute identical operations on all the data. This is called SIMD or Single Instruction Multiple Data. Now if the kernerl has branch statements, but the same program is run, then this is called SPMD or Single Program Multiple Data.
+
+\subsubsection{Task-Parallel Programming Model}
+Multiple kernels can be run which is task parallelism in general or some sort of out-of-order/sync execution. Then there is something called a task graph using \textit{\textbf{OpenCL's event model}}. This can dictate when each of the multiple kernel execution happens
+
+
+
 
 \end{document} 
  

@@ -6,3 +6,5 @@
 \contentsline {subsubsection}{\numberline {1.2.3}Command-Queues:}{3}{subsubsection.1.2.3}
 \contentsline {subsection}{\numberline {1.3}Memory Model}{3}{subsection.1.3}
 \contentsline {subsection}{\numberline {1.4}Programming Models}{4}{subsection.1.4}
+\contentsline {subsubsection}{\numberline {1.4.1}Data-Parallel Programming Model}{4}{subsubsection.1.4.1}
+\contentsline {subsubsection}{\numberline {1.4.2}Task-Parallel Programming Model}{4}{subsubsection.1.4.2}
