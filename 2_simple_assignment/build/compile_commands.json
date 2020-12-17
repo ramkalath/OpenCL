@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/ram/workarea/OpenCL/OpenCL/2_simple_assignment/build",
+  "command": "/usr/bin/c++   -I/home/ram/workarea/OpenCL/OpenCL/2_simple_assignment/./include  -g   -o CMakeFiles/2_simple_assignment.dir/src/main.cpp.o -c /home/ram/workarea/OpenCL/OpenCL/2_simple_assignment/src/main.cpp",
+  "file": "/home/ram/workarea/OpenCL/OpenCL/2_simple_assignment/src/main.cpp"
+}
+]

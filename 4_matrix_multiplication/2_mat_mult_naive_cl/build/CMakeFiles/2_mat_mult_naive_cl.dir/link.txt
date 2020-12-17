@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/2_mat_mult_naive_cl.dir/src/main.cpp.o  -o ../bin/2_mat_mult_naive_cl  -lOpenCL 

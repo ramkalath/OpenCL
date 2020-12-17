@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.4)
 
-set(project_name "2_mat_mult_naive_cl")
+set(project_name "2_simple_assignment")
 # setting project name
 project(${project_name})
 
 # here add all the cpp files involved in the project
-add_executable(${project_name} ./src/main.cpp) # (TODO: enter the cpp files after the project name one after the other with the path)
+add_executable(${project_name} ./src/main.cpp)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
@@ -17,6 +17,7 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 target_include_directories(${project_name} PUBLIC ./include PUBLIC /usr/include PUBLIC /usr/local/include) # you can keep adding more if you want
 
 #here add all the libraries that you included
+#target_link_libraries(${project_name} glfw3 GLEW GL GLU SOIL dl Xinerama Xrandr Xi Xcursor X11 Xxf86vm pthread assimp) # this is and example
 target_link_libraries(${project_name} OpenCL)
 
 # Required for YCM

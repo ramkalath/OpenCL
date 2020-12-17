@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/ram/workarea/OpenCL/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl/build",
+  "command": "/usr/bin/c++   -I/home/ram/workarea/OpenCL/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl/./include  -g   -o CMakeFiles/2_mat_mult_naive_cl.dir/src/main.cpp.o -c /home/ram/workarea/OpenCL/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl/src/main.cpp",
+  "file": "/home/ram/workarea/OpenCL/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl/src/main.cpp"
+}
+]

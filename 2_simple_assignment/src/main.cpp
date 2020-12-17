@@ -1,16 +1,18 @@
 /*****************************************************************************
 * Filename : main.cpp
-* Date : 20-11-2020
+* Date : 8-12-2020
 * Author : Ram
 * Email : ramkalath@gmail.com
-* Breif Description : TODO(ram): not yet working!!!
-* Detailed Description :
+* Breif Description : code simply increments the current value by 1
+* Detailed Description : code simply increments the current value by 1
 *****************************************************************************/
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <CL/cl.h>
-#include <string.h>
+#include<iostream>
+#include<fstream>
+#include<sstream>
+#include<CL/cl.h>
+#include<string.h>
+
+const int ARRAY_SIZE = 100;
 
 char* get_program_from_file(const char* file_path)
 {
@@ -38,7 +40,7 @@ int main()
 	// finding out all the platforms on the computer
 	unsigned int platformcount;
 	clGetPlatformIDs(5, NULL, &platformcount);
-	cl_platform_id *platforms = (cl_platform_id *)malloc(sizeof(cl_platform_id)*platformcount);
+	cl_platform_id *platforms = (cl_platform_id *)malloc(sizeof(cl_platform_id) * platformcount);
 	clGetPlatformIDs(platformcount, platforms, NULL);
 
 	// creating the context
@@ -58,43 +60,39 @@ int main()
 	/* =======================================================================================================
 	3) creating a kernel from the code; building it during runtime
 	======================================================================================================= */
-	const char* kernel_code = get_program_from_file("./Kernel_files/matmult1.cl");
+	const char* kernel_code = get_program_from_file("./kernel_files/simple_assignment.cl");
 	cl_program program = clCreateProgramWithSource(context, 1, (const char**)&kernel_code, NULL, NULL);
 	clBuildProgram(program, 0, NULL, NULL, NULL, NULL); // we have omitted build error checks; we need to do that too
-    cl_kernel kernel = clCreateKernel(program, "matmult1", NULL);
+    cl_kernel kernel = clCreateKernel(program, "simple_assignment", NULL);
 
 	/* =======================================================================================================
 	4) creating data on the host computer
 	======================================================================================================= */
-	int M = 3;
-	int N = 3;
-	int K = 4;
-    float A[12] = {5, 2, 6, 1, 0, 6, 2, 0, 3, 8, 1, 4};
-    float B[12] = {7, 5, 8, 1, 8, 2, 9, 4, 3, 5, 3, 7};
-	float C[12] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int a[ARRAY_SIZE];
+    int result[ARRAY_SIZE];
+    for(unsigned int i=0; i<ARRAY_SIZE; i++)
+        a[i] = 0;
 
 	/* =======================================================================================================
 	5) creating memory objects for the kernel to use
 	======================================================================================================= */
-
-    cl_mem memObjects[3] = {0, 0, 0};
-    memObjects[0] = clCreateBuffer(context, CL_MEM_READ_ONLY|CL_MEM_COPY_HOST_PTR, sizeof(float)*12, A, NULL);
-    memObjects[1] = clCreateBuffer(context, CL_MEM_READ_ONLY|CL_MEM_COPY_HOST_PTR, sizeof(float)*12, B, NULL);
-    memObjects[2] = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(float)*9, NULL, NULL);
-
-    clSetKernelArg(kernel, 0, sizeof(int), (void*)&M);
-    clSetKernelArg(kernel, 1, sizeof(int), (void*)&N);
-    clSetKernelArg(kernel, 2, sizeof(int), (void*)&K);
-    clSetKernelArg(kernel, 3, sizeof(cl_mem), &memObjects[0]);
-    clSetKernelArg(kernel, 4, sizeof(cl_mem), &memObjects[1]);
-    clSetKernelArg(kernel, 5, sizeof(cl_mem), &memObjects[2]);
+    cl_mem memObjects[2] = {0, 0};
+    memObjects[0] = clCreateBuffer(context, CL_MEM_READ_ONLY|CL_MEM_COPY_HOST_PTR, sizeof(int)*ARRAY_SIZE, a, NULL);
+    memObjects[1] = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(int)*ARRAY_SIZE, NULL, NULL);
+	// in the kernel code arguments 0, 1, 2 maps to the first set of arguments there
+    clSetKernelArg(kernel, 0, sizeof(cl_mem), &memObjects[0]);
+    clSetKernelArg(kernel, 1, sizeof(cl_mem), &memObjects[1]);
 
 	/* =======================================================================================================
 	6) setting worksize info
 	======================================================================================================= */
-	size_t globalWorkSize[2] = {(size_t)M, (size_t)N};
+    size_t globalWorkSize[1] = {ARRAY_SIZE};
     size_t localWorkSize[1] = {1};
+	
+    clock_t start, end; 
+    start = clock(); 
 
+	// This is where the computation happens; the enqueue command queues up the command in the command_queue. Later when the previous event is finished, this is executed.
     clEnqueueNDRangeKernel(command_queue, 
 						   kernel, 
 						   1, 
@@ -105,23 +103,26 @@ int main()
 						   NULL, 
 						   NULL);
 
+    end = clock(); 
+	std::cout << "Time taken by program is : " << double(end - start)/(double)(CLOCKS_PER_SEC) << std::endl;
+
 	/* =======================================================================================================
 	7) reading the buffer back to the host
 	======================================================================================================= */
     clEnqueueReadBuffer(command_queue, 
-						memObjects[2], // read from mem object 2
+						memObjects[1], // read from mem object 1
 						CL_TRUE, // blocking_read - waits for the read to complete before return
 						0, 
-						9*sizeof(float), 
-						C, // into result
+						ARRAY_SIZE*sizeof(int), 
+						result, // into result
 						0, 
 						NULL, 
 						NULL);
 
 
 	/* printing the result ================================================================================*/
-	for(unsigned int i=0; i<9; i++) 
-		std::cout << C[i] << " ";
+	for(unsigned int i=0; i<ARRAY_SIZE; i++) 
+		std::cout << result[i] << " ";
 
 	std::cout << std::endl;
 
