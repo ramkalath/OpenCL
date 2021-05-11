@@ -1,7 +1,7 @@
 [
 {
-  "directory": "/home/ram/workarea/OpenCL/OpenCL/2_helloworld/build",
-  "command": "/usr/bin/c++   -I/home/ram/workarea/OpenCL/OpenCL/2_helloworld/./include  -g   -o CMakeFiles/1_helloworld.dir/src/main.cpp.o -c /home/ram/workarea/OpenCL/OpenCL/2_helloworld/src/main.cpp",
-  "file": "/home/ram/workarea/OpenCL/OpenCL/2_helloworld/src/main.cpp"
+  "directory": "/home/ram/workarea/OpenCL/2_helloworld/build",
+  "command": "/usr/bin/c++   -I/home/ram/workarea/OpenCL/2_helloworld/./include  -g   -o CMakeFiles/1_helloworld.dir/src/main.cpp.o -c /home/ram/workarea/OpenCL/2_helloworld/src/main.cpp",
+  "file": "/home/ram/workarea/OpenCL/2_helloworld/src/main.cpp"
 }
 ]

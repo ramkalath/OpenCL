@@ -2,7 +2,11 @@
 \usepackage[letterpaper, portrait, margin=0.5in]{geometry} 
 \usepackage{pbsi}
 \usepackage[T1]{fontenc}
+
+\usepackage{float}
 \usepackage{graphicx}
+\usepackage{subfig}
+
 
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan}
@@ -17,6 +21,7 @@
 
 % ----------------------------------------------------------------------------------------------------------------
 {\color{red} \date{2-Nov-2020}}
+\Large
 \section{Programming Models}
 \subsection{Platform Model}
 This is a very high level description of the heteregeneous system. 
@@ -33,6 +38,30 @@ This is a very high level description of the heteregeneous system.
   \caption{OpenCL platform model}
   \label{platform_model}
 \end{figure}
+
+Before we wind up this subtopic, let us take a look at some of the existing GPU's and figure out their architecture, i.e., map the above terms to their hardware.
+
+\begin{enumerate}
+	\item \textit{\textbf{AMD A10 5800K:}}
+		\begin{figure}[H]
+		  \centering
+		  \includegraphics[scale=0.7]{./images/1_Amd_a10_5800k_GPU_Device.png}
+		\end{figure}
+	\item \textit{\textbf{AMD Radeon HD 7870 Graphics Processor}}
+		\begin{figure}[H]
+		  \centering
+		  \includegraphics[scale=0.6]{./images/2_AMD_Radeon_HD_7870_GPU_Device.png}
+		\end{figure}
+\end{enumerate}
+
+\subsubsection{Platform Versions}
+OpenCL devices have different capabilitites under the same hood. There are two version identifiers
+\begin{enumerate}
+	\item \textit{\textbf{Platform Version:}} Indicates version number of OpenCL installed
+	\item \textit{\textbf{Device Version:}} Indicates the device capabilities. The conformant version info provided here should not exceed the \textit{Platform Version}.
+\end{enumerate}
+
+\subsubsection{Code to query Platform Versions}
 
 \subsection{Execution Model}
 An OpenCL program has two distinct parts: 1) \textbf{\textit{Host}} program and 2) a collection of one or more \textbf{\textit{kernels}}. Host program runs on the host. Host program is our normal cpp or python code. OpenCL does not define how that is programmed - only how it interacts with the compute device(s).
@@ -78,10 +107,10 @@ In a host program, the programmer defines command-queues, memory and program obj
 
 \begin{enumerate}
 	\item \textit{\textbf{In order execution:}} commands in the command queue are executed in order after waits.
-	\item \textit{\textbf{Out of order exectuion:}} commands in the command queue does not wait for one execution to get over.
+	\item \textit{\textbf{Out of order execution:}} commands in the command queue does not wait for one execution to get over.
 \end{enumerate}
 
-By default all versions of OpenCL support inorder exectuion. Out of order execution is necessary for load balancing. For synchronization, commands generate what is called \textit{\textbf{event objects}}. More like a `hey I am done' event. 
+By default all versions of OpenCL support inorder execution. Out of order execution is necessary for load balancing. For synchronization, commands generate what is called \textit{\textbf{event objects}}. More like a `hey I am done' event. 
 
 One can also have multiple queues within one command queue. The queues run concurrently with no mechanisms for sync between them.
 
@@ -110,9 +139,6 @@ There is something called heirarchical data parallelism. In \textit{\textbf{expl
 
 \subsubsection{Task-Parallel Programming Model}
 Multiple kernels can be run which is task parallelism in general or some sort of out-of-order/sync execution. Then there is something called a task graph using \textit{\textbf{OpenCL's event model}}. This can dictate when each of the multiple kernel execution happens
-
-
-
 
 \end{document} 
  
