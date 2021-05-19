@@ -1,3 +1,0 @@
-/home/ram/workarea/OpenCL/OpenCL/2_simple_assignment/build/CMakeFiles/rebuild_cache.dir
-/home/ram/workarea/OpenCL/OpenCL/2_simple_assignment/build/CMakeFiles/2_simple_assignment.dir
-/home/ram/workarea/OpenCL/OpenCL/2_simple_assignment/build/CMakeFiles/edit_cache.dir
