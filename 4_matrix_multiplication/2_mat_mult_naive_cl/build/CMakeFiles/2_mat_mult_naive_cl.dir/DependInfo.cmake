@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ram/workarea/OpenCL/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl/src/main.cpp" "/home/ram/workarea/OpenCL/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl/build/CMakeFiles/2_mat_mult_naive_cl.dir/src/main.cpp.o"
+  "/home/ram/workarea/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl/src/main.cpp" "/home/ram/workarea/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl/build/CMakeFiles/2_mat_mult_naive_cl.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

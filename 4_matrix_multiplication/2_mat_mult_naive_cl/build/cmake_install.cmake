@@ -1,4 +1,4 @@
-# Install script for directory: /home/ram/workarea/OpenCL/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl
+# Install script for directory: /home/ram/workarea/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ram/workarea/OpenCL/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ram/workarea/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

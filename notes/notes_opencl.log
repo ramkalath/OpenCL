@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.11.24)  7 MAY 2021 16:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.11.24)  31 MAY 2021 19:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -62,13 +62,10 @@ Package pbsi Warning: bad encoding; assuming T1..
 (/usr/share/texlive/texmf-dist/tex/latex/brushscr/t1pbsi.fd
 File: t1pbsi.fd 2001/09/24 Fontinst v1.801 font definitions for T1/pbsi.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-))
+(/usr/share/texlive/texmf-dist/tex/latex/sectsty/sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+)
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count90
@@ -240,25 +237,83 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip48
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 12.
+Package hyperref Info: Option `colorlinks' set `true' on input line 19.
 
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen125
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen126
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count109
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count110
+\leftroot@=\count111
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count112
+\DOTSCASE@=\count113
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen127
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count114
+\c@MaxMatrixCols=\count115
+\dotsspace@=\muskip11
+\c@parentequation=\count116
+\dspbrk@lvl=\count117
+\tag@help=\toks19
+\row@=\count118
+\column@=\count119
+\maxfields@=\count120
+\andhelp@=\toks20
+\eqnshift@=\dimen128
+\alignsep@=\dimen129
+\tagshift@=\dimen130
+\tagwidth@=\dimen131
+\totwidth@=\dimen132
+\lineht@=\dimen133
+\@envbody=\toks21
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
 (./notes_opencl.aux)
 \openout1 = `notes_opencl.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -296,17 +351,17 @@ LaTeX Font Info:    ... okay on input line 14.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count109
-\scratchdimen=\dimen125
-\scratchbox=\box28
-\nofMPsegments=\count110
-\nofMParguments=\count111
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count112
-\MPscratchDim=\dimen126
-\MPnumerator=\count113
-\makeMPintoPDFobject=\count114
-\everyMPtoPDFconversion=\toks19
+\scratchcounter=\count121
+\scratchdimen=\dimen134
+\scratchbox=\box30
+\nofMPsegments=\count122
+\nofMParguments=\count123
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen135
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
+\everyMPtoPDFconversion=\toks24
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -328,7 +383,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box29
+\AtBeginShipoutBox=\box31
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
@@ -338,7 +393,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 14.
+Package hyperref Info: Link coloring ON on input line 23.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -346,103 +401,81 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count115
+\c@section@level=\count127
 )
-LaTeX Info: Redefining \ref on input line 14.
-LaTeX Info: Redefining \pageref on input line 14.
-LaTeX Info: Redefining \nameref on input line 14.
+LaTeX Info: Redefining \ref on input line 23.
+LaTeX Info: Redefining \pageref on input line 23.
+LaTeX Info: Redefining \nameref on input line 23.
 
 (./notes_opencl.out) (./notes_opencl.out)
 \@outlinefile=\write3
 \openout3 = `notes_opencl.out'.
 
 LaTeX Font Info:    Font shape `T1/pbsi/xl/n' will be
-(Font)              scaled to size 29.85593pt on input line 19.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 19.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 19.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 19.
- (./notes_opencl.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 2.
-)
+(Font)              scaled to size 29.85593pt on input line 28.
+ (./notes_opencl.toc)
 \tf@toc=\write4
 \openout4 = `notes_opencl.toc'.
 
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<./images/platform_model.png, id=70, 611.28375pt x 341.275pt>
+<./images/load_balancing.png, id=40, 523.9575pt x 388.45125pt>
+File: ./images/load_balancing.png Graphic file (type png)
+<use ./images/load_balancing.png>
+Package pdftex.def Info: ./images/load_balancing.png  used on input line 44.
+(pdftex.def)             Requested size: 261.9781pt x 194.22514pt.
+<./images/data_parallelism.png, id=42, 555.07375pt x 194.7275pt>
+File: ./images/data_parallelism.png Graphic file (type png)
+<use ./images/data_parallelism.png>
+Package pdftex.def Info: ./images/data_parallelism.png  used on input line 53.
+(pdftex.def)             Requested size: 388.54897pt x 136.3083pt.
+ [2 <./images/load_balancing.png>]
+<./images/platform_model.png, id=51, 611.28375pt x 341.275pt>
 File: ./images/platform_model.png Graphic file (type png)
 <use ./images/platform_model.png>
-Package pdftex.def Info: ./images/platform_model.png  used on input line 37.
+Package pdftex.def Info: ./images/platform_model.png  used on input line 68.
 (pdftex.def)             Requested size: 244.50917pt x 136.50757pt.
-<./images/1_Amd_a10_5800k_GPU_Device.png, id=72, 633.36626pt x 733.74126pt>
-File: ./images/1_Amd_a10_5800k_GPU_Device.png Graphic file (type png)
-<use ./images/1_Amd_a10_5800k_GPU_Device.png>
-Package pdftex.def Info: ./images/1_Amd_a10_5800k_GPU_Device.png  used on input
- line 48.
-(pdftex.def)             Requested size: 443.35336pt x 513.61539pt.
- [2 <./images/platform_model.png>]
-<./images/2_AMD_Radeon_HD_7870_GPU_Device.png, id=87, 872.25874pt x 587.19376pt
->
-File: ./images/2_AMD_Radeon_HD_7870_GPU_Device.png Graphic file (type png)
-<use ./images/2_AMD_Radeon_HD_7870_GPU_Device.png>
-Package pdftex.def Info: ./images/2_AMD_Radeon_HD_7870_GPU_Device.png  used on 
-input line 53.
-(pdftex.def)             Requested size: 523.35928pt x 352.31897pt.
 
-[3 <./images/1_Amd_a10_5800k_GPU_Device.png>] [4 <./images/2_AMD_Radeon_HD_7870
-_GPU_Device.png>]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 82.
- [5] [6] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 143.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
+[3 <./images/data_parallelism.png> <./images/platform_model.png>]
+<./images/NDRange.png, id=64, 555.07375pt x 364.36125pt>
+File: ./images/NDRange.png Graphic file (type png)
+<use ./images/NDRange.png>
+Package pdftex.def Info: ./images/NDRange.png  used on input line 98.
+(pdftex.def)             Requested size: 333.0468pt x 218.61842pt.
+ [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
+ [5 <./images/NDRange.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
  (./notes_opencl.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 143.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
-
-
-Package rerunfilecheck Warning: File `notes_opencl.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `notes_opencl.out':
-(rerunfilecheck)             Before: 35CBA1FDB1374F823DFFD6562ED057D7;775
-(rerunfilecheck)             After:  4B06A0E6A0B67E00DF1B65B8180B3A58;866.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
+Package rerunfilecheck Info: File `notes_opencl.out' has not changed.
+(rerunfilecheck)             Checksum: B33DF74AD617BFCD845FAD59E3F42221;297.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
  ) 
 Here is how much of TeX's memory you used:
- 7037 strings out of 494923
- 107199 string characters out of 6180741
- 192055 words of memory out of 5000000
- 10239 multiletter control sequences out of 15000+600000
- 17691 words of font info for 39 fonts, out of 8000000 for 9000
+ 7519 strings out of 494923
+ 113540 string characters out of 6180741
+ 203868 words of memory out of 5000000
+ 10719 multiletter control sequences out of 15000+600000
+ 13996 words of font info for 44 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,8n,42p,935b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
-e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
-ype1/public/brushscr/BrushScriptX-Italic.pfa></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbi1440.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sfti1440.pfb>
-Output written on notes_opencl.pdf (8 pages, 671932 bytes).
+ 44i,7n,42p,1130b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/brushscr/BrushScriptX-Italic.pfa></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti12.pfb>
+Output written on notes_opencl.pdf (5 pages, 196742 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
- 48 named destinations out of 1000 (max. 500000)
- 104 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 138 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

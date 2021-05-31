@@ -6,5 +6,5 @@ CXX_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ram/workarea/OpenCL/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl/./include 
+CXX_INCLUDES = -I/home/ram/workarea/OpenCL/4_matrix_multiplication/2_mat_mult_naive_cl/./include 
 
