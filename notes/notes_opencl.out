@@ -1,5 +1,11 @@
-\BOOKMARK [1][-]{section.1}{What is OpenCL?}{}% 1
-\BOOKMARK [1][-]{section.2}{Programming Models}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Platform Model}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Execution Model}{section.2}% 4
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Context:}{subsection.2.2}% 5
+\BOOKMARK [0][-]{chapter.1}{Introduction to OpenCL}{}% 1
+\BOOKMARK [1][-]{section.1.1}{What is OpenCL?}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Programming Models}{chapter.1}% 3
+\BOOKMARK [2][-]{subsection.1.2.1}{Platform Model}{section.1.2}% 4
+\BOOKMARK [2][-]{subsection.1.2.2}{Execution Model}{section.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.2.3}{Memory Model}{section.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.2.4}{Programming Models}{section.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.2.5}{OpenCL Frameworks - Contents of OpenCL}{section.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.2.6}{OpenCL Summary}{section.1.2}% 9
+\BOOKMARK [0][-]{chapter.2}{HelloWorld with OpenCL}{}% 10
+\BOOKMARK [1][-]{section.2.1}{Adding two arrays}{chapter.2}% 11

@@ -1,5 +1,19 @@
-\contentsline {section}{\numberline {1}What is OpenCL?}{2}{section.1}
-\contentsline {section}{\numberline {2}Programming Models}{2}{section.2}
-\contentsline {subsection}{\numberline {2.1}Platform Model}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Execution Model}{3}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Context:}{5}{subsubsection.2.2.1}
+\contentsline {chapter}{\numberline {1}Introduction to OpenCL}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}What is OpenCL?}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Programming Models}{5}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Platform Model}{6}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Execution Model}{7}{subsection.1.2.2}
+\contentsline {subsubsection}{NDRange and associated notations}{7}{section*.5}
+\contentsline {subsubsection}{Context}{8}{section*.7}
+\contentsline {subsubsection}{Command Queues}{9}{section*.8}
+\contentsline {subsection}{\numberline {1.2.3}Memory Model}{10}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.4}Programming Models}{13}{subsection.1.2.4}
+\contentsline {subsubsection}{Data-Parallel Programming Model}{13}{section*.10}
+\contentsline {subsubsection}{Task-Parallelism Programming Model}{13}{section*.11}
+\contentsline {subsection}{\numberline {1.2.5}OpenCL Frameworks - Contents of OpenCL}{14}{subsection.1.2.5}
+\contentsline {subsubsection}{Platform API}{14}{section*.12}
+\contentsline {subsubsection}{Runtime API}{14}{section*.13}
+\contentsline {subsubsection}{Kernel Programming Language}{14}{section*.14}
+\contentsline {subsection}{\numberline {1.2.6}OpenCL Summary}{15}{subsection.1.2.6}
+\contentsline {chapter}{\numberline {2}HelloWorld with OpenCL}{17}{chapter.2}
+\contentsline {section}{\numberline {2.1}Adding two arrays}{17}{section.2.1}
