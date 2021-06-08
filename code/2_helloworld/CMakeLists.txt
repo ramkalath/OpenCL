@@ -14,7 +14,7 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 # add all the include files
-target_include_directories(${project_name} PUBLIC ./include PUBLIC /usr/include PUBLIC /usr/local/include) # you can keep adding more if you want
+target_include_directories(${project_name} PUBLIC ./include PUBLIC /usr/include PUBLIC /usr/local/include PUBLIC /usr/lib/x86_64-linux-gnu) # you can keep adding more if you want
 
 #here add all the libraries that you included
 target_link_libraries(${project_name} OpenCL)

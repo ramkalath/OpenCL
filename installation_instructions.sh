@@ -4,5 +4,7 @@ sudo apt update
 sudo apt install nvidia-opencl-dev # this is for nvidia
 
 sudo apt-get install beignet-opencl-icd ocl-icd-libopencl1 clinfo # this is for intel
+sudo apt install ocl-icd-opencl-dev
+
 
 clinfo # gives a comprehensive report on the cl devices that are enabled on the computer

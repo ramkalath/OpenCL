@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/ram/workarea/OpenCL/code/2_helloworld/build",
-  "command": "/usr/bin/c++   -I/home/ram/workarea/OpenCL/code/2_helloworld/./include  -g   -o CMakeFiles/1_helloworld.dir/src/main.cpp.o -c /home/ram/workarea/OpenCL/code/2_helloworld/src/main.cpp",
+  "command": "/usr/bin/c++   -I/home/ram/workarea/OpenCL/code/2_helloworld/./include -I/usr/lib/x86_64-linux-gnu  -g   -o CMakeFiles/1_helloworld.dir/src/main.cpp.o -c /home/ram/workarea/OpenCL/code/2_helloworld/src/main.cpp",
   "file": "/home/ram/workarea/OpenCL/code/2_helloworld/src/main.cpp"
 }
 ]

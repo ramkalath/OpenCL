@@ -6,5 +6,5 @@ CXX_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ram/workarea/OpenCL/code/2_helloworld/./include 
+CXX_INCLUDES = -I/home/ram/workarea/OpenCL/code/2_helloworld/./include -I/usr/lib/x86_64-linux-gnu 
 
